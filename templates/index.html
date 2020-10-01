@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>IPL</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Predict IPL score!!</h1>
+        <hr>
+        <hr>
+            <h1>Enter the following Data for prediction </h1>
+
+        <form action="{{ url_for('predict') }}"  method="post">
+  <div class="form-group" align="center">
+    <div class="form-group">
+    <div class="form-group col-md-4">
+      <label>Select Batting Team</label>
+      <select id="bat_team" name="batting-team" required="required" class="form-control">
+        <option selected>Choose...</option>
+        <option value="Mumbai Indians">Mumbai Indians</option>
+                        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                        <option value="Chennai Super Kings">Chennai Super Kings</option>
+                        <option value="Rajasthan Royals">Rajasthan Royals</option>
+                        <option value="Kings XI Punjab">Kings XI Punjab</option>
+                        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                        <option value="Delhi Daredevils">Delhi Daredevils</option>
+                        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+      </select>
+    </div>
+        <div class="form-group">
+    <div class="form-group col-md-4">
+      <label>Select Bowling Team Team</label>
+      <select id="bowling_team" name="bowling-team" required="required" class="form-control">
+        <option selected>Choose...</option>
+        <option value="Mumbai Indians">Mumbai Indians</option>
+                        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                        <option value="Chennai Super Kings">Chennai Super Kings</option>
+                        <option value="Rajasthan Royals">Rajasthan Royals</option>
+                        <option value="Kings XI Punjab">Kings XI Punjab</option>
+                        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                        <option value="Delhi Daredevils">Delhi Daredevils</option>
+                        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+      </select>
+    </div>
+
+  </div>
+  <div class="form-group col-md-4">
+    <label>Overs</label>
+    <input type="text" name="overs" class="form-control" id="overs">
+  </div>
+  <div class="form-group col-md-4">
+    <label>Runs</label>
+    <input type="text" name="runs" class="form-control">
+  </div>
+        <div class="form-group col-md-4">
+    <label>Wickets</label>
+    <input type="text" name="wickets" class="form-control">
+  </div>
+        <div class="form-group col-md-4">
+    <label>Runs scored in previous 5 overs</label>
+    <input type="text" name="runs_in_prev_5" class="form-control">
+  </div>
+        <div class="form-group col-md-4">
+    <label>Wickets Taken in previous 5 overs</label>
+    <input type="text" name="wickets_in_prev_5" class="form-control">
+  </div>
+
+
+  <button  type="submit" class="btn btn-primary">Predict 1st Inning Score!</button>
+</form>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
